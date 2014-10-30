@@ -10,9 +10,9 @@ using System.Threading.Tasks;
 
 namespace HeDdnsUpdaterService
 {
-    public partial class Service1 : ServiceBase
+    public partial class HeDdnsUpdater : ServiceBase
     {
-        public Service1()
+        public HeDdnsUpdater()
         {
             InitializeComponent();
         }

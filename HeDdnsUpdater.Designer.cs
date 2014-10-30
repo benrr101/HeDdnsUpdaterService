@@ -1,6 +1,6 @@
 ﻿namespace HeDdnsUpdaterService
 {
-    partial class Service1
+    partial class HeDdnsUpdater
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.ServiceName = "Service1";
+            // 
+            // HeDdnsUpdater
+            // 
+            this.ServiceName = "HeDdnsUpdater";
+
         }
 
         #endregion
+
     }
 }
