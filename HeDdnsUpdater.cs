@@ -1,23 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Diagnostics;
-using System.Linq;
 using System.ServiceProcess;
-using System.Text;
-using System.Threading.Tasks;
 using HeDdnsUpdaterService.Properties;
 
 namespace HeDdnsUpdaterService
 {
     public partial class HeDdnsUpdater : ServiceBase
     {
+        private UpdaterThread _updateThread;
+
         public HeDdnsUpdater()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Called when the service starts. Instantiates the update thread and starts it.
+        /// </summary>
+        /// <param name="args">Arguments to the service. Not used.</param>
         protected override void OnStart(string[] args)
         {
             // Snag the configuration information for updating
@@ -29,11 +29,21 @@ namespace HeDdnsUpdaterService
             Trace.TraceInformation("Will update '{0}' every {1}", hostname, updateDelay);
 
             // Spin up a thread to do the updating
-
+            _updateThread = new UpdaterThread
+            {
+                Hostname = hostname,
+                Key = key,
+                UpdateDelay = updateDelay
+            };
+            _updateThread.RunThread();
         }
 
         protected override void OnStop()
         {
+            Trace.TraceInformation("Shutting down HE DDNS Updater Service...");
+
+            // Clean up the timer thread
+            _updateThread.Dispose();
         }
     }
 }
