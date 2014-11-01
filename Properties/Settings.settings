@@ -2,14 +2,14 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="HeDdnsUpdaterService.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="Hostname" Type="System.String" Scope="User">
-      <Value Profile="(Default)">myhostname.example.com</Value>
-    </Setting>
-    <Setting Name="DdnsKey" Type="System.String" Scope="User">
-      <Value Profile="(Default)">MyKey</Value>
-    </Setting>
     <Setting Name="UpdateDelay" Type="System.TimeSpan" Scope="User">
       <Value Profile="(Default)">01:00:00</Value>
+    </Setting>
+    <Setting Name="Hostname" Type="System.String" Scope="User">
+      <Value Profile="(Default)">hostname.example.com</Value>
+    </Setting>
+    <Setting Name="DdnsKey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Key</Value>
     </Setting>
   </Settings>
 </SettingsFile>
