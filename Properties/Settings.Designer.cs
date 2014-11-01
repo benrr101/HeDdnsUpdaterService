@@ -23,39 +23,30 @@ namespace HeDdnsUpdaterService.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("01:00:00")]
         public global::System.TimeSpan UpdateDelay {
             get {
                 return ((global::System.TimeSpan)(this["UpdateDelay"]));
             }
-            set {
-                this["UpdateDelay"] = value;
-            }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("hostname.example.com")]
         public string Hostname {
             get {
                 return ((string)(this["Hostname"]));
             }
-            set {
-                this["Hostname"] = value;
-            }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Key")]
         public string DdnsKey {
             get {
                 return ((string)(this["DdnsKey"]));
-            }
-            set {
-                this["DdnsKey"] = value;
             }
         }
     }
