@@ -15,24 +15,9 @@ Installation is a little complicated since installing a service isn't as easy as
 
 1. Copy the HeDdnsUpdaterService.exe and HeDdnsUpdaterService.exe.config files into a permanent location (something like C:\Program Files\HE Updater\)
 2. Modify HeDdnsUpdaterService.exe.config to fit your needs
-	1. Change line 27 to contain the amount of time you the service to wait between updates (in hr:min:sec format)
-```
-<setting name="UpdateDelay" serializeAs="String">
-    <value>01:00:00</value>
-</setting>
-```
-	2. Change line 30 to contain the hostname you wish to update with the machine's current IP address (no HTTP or slashes)
-```
-<setting name="Hostname" serializeAs="String">
-    <value>hostname.example.com</value>
-</setting>
-```
-	3. Change line 33 to contain the authorization key you obtained from HE's DDNS web app (see their website for more information)
-```
-<setting name="DdnsKey" serializeAs="String">
-    <value>lskdjfoiernvjsdkakleru</value>
-</setting>
-```
+	1. Change line 27 to contain the amount of time you the service to wait between updates (in hr:min:sec format) `<value>01:00:00</value>`
+	2. Change line 30 to contain the hostname you wish to update with the machine's current IP address (no HTTP or slashes) `<value>hostname.example.com</value>`
+	3. Change line 33 to contain the authorization key you obtained from HE's DDNS web app (see their website for more information) `<value>lskdjfoiernvjsdkakleru</value>`
 3. Install the service
 	1. Open an administrator command prompt
 	2. Navigate to the path you copied the binaries to in step 1
